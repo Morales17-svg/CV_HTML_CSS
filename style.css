@@ -1,3 +1,15 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
 /* Ajuste del contenedor principal */
 .container {
     max-width: 1200px;
@@ -5,6 +17,7 @@
     padding: 20px;
     background-color: #FFFFFF;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
 /* Encabezado con la imagen alineada */
@@ -14,6 +27,7 @@ header {
     background-color: #001f3f; /* Azul marino oscuro */
     color: white;
     padding: 20px;
+    flex-wrap: wrap; /* Asegura que en pantallas pequeñas, el contenido se ajuste */
 }
 
 /* Ajustes de la imagen */
@@ -24,17 +38,18 @@ header img {
     border-radius: 50%; /* Hace que la imagen sea circular */
 }
 
+/* Contenedor para h1 y h2 */
 header div {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    flex-direction: column; /* Coloca h1 y h2 uno debajo del otro */
+    justify-content: center; /* Centra los títulos verticalmente */
+    text-align: center; /* Centra el texto horizontalmente */
 }
 
 /* Ajustes de los títulos del encabezado */
 header h1, header h2 {
     margin: 0;
-    
+    font-family: 'Roboto', sans-serif; /* Fuente diferente para los encabezados */
 }
 
 header h1 {
@@ -46,6 +61,18 @@ header h2 {
     color: white;
 }
 
+/* Layout responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Coloca la imagen y los títulos en columna en pantallas pequeñas */
+        text-align: center;
+    }
+
+    header img {
+        margin: 0 0 20px 0; /* Centra la imagen y agrega margen inferior */
+    }
+}
+
 /* Otras secciones */
 .objetivo_P, .educacion, .cursos, .idiomas, .competencias, .laboral {
     margin-bottom: 30px;
@@ -55,14 +82,17 @@ h2 {
     color: #001f3f;
     border-bottom: 2px solid #4a90e2;
     padding-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
 }
 
 p, li {
     font-size: 18px;
     line-height: 1.6;
     padding-left: 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
+/* Listas estilizadas */
 ul {
     list-style-type: none;
     padding-left: 0;
@@ -72,27 +102,54 @@ ul li {
     margin: 10px 0;
 }
 
-/* sección de datos personales */
-.section ul li p {
-    display: inline;
+/* Estilo para la experiencia laboral y educación */
+.laboral ul li, .educacion ul li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #4a90e2;
+    transition: background-color 0.3s ease;
 }
 
-/* estilos para la educación */
-.educacion ul li p {
-    margin: 5px 0 0 0;
-    font-size: 16 px;
+.laboral ul li:hover, .educacion ul li:hover {
+    background-color: #e3f2fd; /* Cambio de color al pasar el mouse */
+}
+
+.laboral ul li strong, .educacion ul li strong {
     color: #4a90e2;
 }
 
-/* experiencia laboral */
-.laboral ul ul {
-    margin-left: 20px;
+.laboral ul li p, .educacion ul li p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
 }
 
-.laboral ul li strong {
+/* Estilo de las habilidades */
+.competencias ul li {
+    background-color: #e3f2fd;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-left: 4px solid #4a90e2;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #001f3f;
+    color: white;
+}
+
+/* Estilo del enlace en el footer */
+footer a {
     color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-strong {
-    color: #001f3f;
+footer a:hover {
+    color: #ffffff;
 }
