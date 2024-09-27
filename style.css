@@ -74,7 +74,7 @@ header h2 {
 }
 
 /* Otras secciones */
-.objetivo_P, .educacion, .cursos, .idiomas, .competencias, .laboral {
+.objetivo_P, .educacion, .cursos, .competencias, .laboral, .idioma {
     margin-bottom: 30px;
 }
 
@@ -126,7 +126,7 @@ ul li {
 }
 
 /* Estilo de las habilidades */
-.competencias ul li {
+.idioma ul li, .competencias ul li {
     background-color: #e3f2fd;
     padding: 10px;
     margin-bottom: 5px;
